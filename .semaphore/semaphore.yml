@@ -13,7 +13,7 @@ blocks:
             - checkout
             - docker login -u zejjelthi -p Zakaria@7156
             - 'docker pull $SEMAPHORE_REGISTRY_URL/demo:latest || true'
-            - 'docker build --cache-from demo:latest -t demo:$SEMAPHORE_WORKFLOW_ID .'
+            - 'docker build --cache-from zejjelthi/demo:latest -t zejjelthi/demo:$SEMAPHORE_WORKFLOW_ID .'
             - 'docker push zejjelthi/demo:$SEMAPHORE_WORKFLOW_ID'
   - name: Tests
     task:

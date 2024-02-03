@@ -41,5 +41,5 @@ blocks:
           commands:
             - docker login -u zejjelthi -p Zakaria@7156
             - 'docker pull zejjelthi/demo:$SEMAPHORE_WORKFLOW_ID'
-            - 'docker tag zejjelthi/demo:$SEMAPHORE_WORKFLOW_ID $SEMAPHORE_REGISTRY_URL/demo:latest'
+            - 'docker tag zejjelthi/demo:$SEMAPHORE_WORKFLOW_ID zejjelthi/demo:latest'
             - 'docker push zejjelthi/demo:latest'
